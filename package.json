@@ -1,0 +1,31 @@
+{
+  "name": "@pmedianetwork/eslint-config",
+  "version": "1.0.0",
+  "description": "Shared ESLint config for pmedianetwork projects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "eslint": "4.19.1",
+    "eslint-config-airbnb": "15.1.0",
+    "eslint-import-resolver-webpack": "0.10.0",
+    "eslint-plugin-flowtype": "2.49.3",
+    "eslint-plugin-flowtype-errors": "3.6.0",
+    "eslint-plugin-import": "2.12.0",
+    "eslint-plugin-jsx-a11y": "5.1.1",
+    "eslint-plugin-no-only-tests": "2.0.0",
+    "eslint-plugin-react": "7.9.1",
+    "babel-eslint": "8.2.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pmedianetwork/eslint-config.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pmedianetwork/eslint-config/issues"
+  },
+  "homepage": "https://github.com/pmedianetwork/eslint-config#readme"
+}
