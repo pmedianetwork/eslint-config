@@ -17,7 +17,6 @@ module.exports = {
     "env": {
         "browser": true, // We write for browser
         "node": true, // in CommonJS
-        "jquery": true, // Some parts of code uses jQuery
         "es6": true // And we use ES6 features
     },
     "parserOptions": {
