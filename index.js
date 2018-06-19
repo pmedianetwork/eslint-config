@@ -20,19 +20,6 @@ module.exports = {
         "jquery": true, // Some parts of code uses jQuery
         "es6": true // And we use ES6 features
     },
-    "globals": {// Some more globals for legacy code. In the future we should not use globals.
-        "expect": false, // Needed for tests
-        "sinon": false, // Needed for tests
-        "angular": false,
-        "d3": false,
-        "moment": false,
-        "Highcharts": false,
-        "gapi": false,
-        "dateRange": false,
-        "weekday": false,
-        "globals": false, // This is where the serialized state comes in
-        "_PRODUCTION_": false // Webpack DefinPlugin globals
-    },
     "parserOptions": {
         "ecmaVersion": 6,
         "sourceType": "module",
@@ -40,53 +27,6 @@ module.exports = {
             "jsx": true
         }
     },
-    "overrides": [
-        {
-            "files": ["**/*.spec.snapshot.js"],
-            "env": {
-                "jest": true
-            },
-            "rules": {
-                "max-len": "off",
-                "no-useless-computed-key": "off", // flow does not support non-string property keys https://github.com/facebook/flow/issues/380
-            }
-        },
-        {
-            "files": ["**/*.spec.js"],
-            "env": {
-                "mocha": true
-            },
-            "rules": {
-                "max-len": "off",
-                "no-unused-expressions": "off",
-                "react/no-find-dom-node": "off"
-            }
-        },
-        {
-            "files": ["**/*.test.js"],
-            "env": {
-                "jest": true
-            },
-            "rules": {
-                "max-len": "off",
-                "no-unused-expressions": "off",
-                "no-useless-computed-key": "off", // flow does not support non-string property keys https://github.com/facebook/flow/issues/380
-                "react/no-find-dom-node": "off"
-            }
-        },
-        {
-            "files": ["**/stories.js"],
-            "rules": {
-                "max-len": "off"
-            }
-        },
-        {
-            "files": ["**/*showcase[0-9][0-9][0-9].js"],
-            "rules": {
-                "max-len": "off"
-            }
-        }
-    ],
     "rules": {
 
         ////////// Possible Errors //////////
