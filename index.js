@@ -75,11 +75,14 @@ module.exports = {
             "capIsNewExceptions": ["R$", "List", "Map"]
         }],
         "no-multiple-empty-lines": ["error", { "max": 1 }],
+        "function-paren-newline": "off",
+        "object-curly-newline": "off",
 
         ////////// ECMAScript 6 //////////
 
         "arrow-body-style": [1],
         "arrow-parens": ["error", "as-needed", { "requireForBlockBody": false }],
+        "prefer-destructuring": "off",
 
         ////////// React //////////
 
@@ -105,6 +108,8 @@ module.exports = {
 
         "jsx-a11y/no-noninteractive-element-interactions": "off",
         "jsx-a11y/no-static-element-interactions": "off",
+        "jsx-a11y/click-events-have-key-events": "off",
+        "jsx-a11y/mouse-events-have-key-events": "off",
 
         ////////// Imports //////////
 
