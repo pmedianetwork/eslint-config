@@ -1,6 +1,6 @@
 module.exports = {
-  extends: [
-    '@pmedianetwork/eslint-config',
+  "extends": [
+    "../insights",
     "prettier",
     "prettier/flowtype",
     "prettier/react",
