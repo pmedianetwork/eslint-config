@@ -1,10 +1,11 @@
 module.exports = {
   "extends": [
     "@pmedianetwork/eslint-config",
+    "plugin:flowtype/recommended"
   ],
   "plugins": [
     "flowtype",
-    "flowtype-errors",
+    "flowtype-errors"
   ],
   "settings": {
     "flowtype": {
