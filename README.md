@@ -27,7 +27,7 @@ Use it by setting the extends field in your `.eslintrc`:
 };
 ```
 
-## For datatab 
+## For datatap 
 
 ```js
 {
