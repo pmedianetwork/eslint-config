@@ -31,6 +31,6 @@ Use it by setting the extends field in your `.eslintrc`:
 
 ```js
 {
-  extends: '@pmedianetwork/eslint-config/datatab',
+  extends: '@pmedianetwork/eslint-config/datatap',
 };
 ```
