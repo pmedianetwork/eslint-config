@@ -11,12 +11,26 @@ Use it by setting the extends field in your `.eslintrc`:
 };
 ```
 
-## Prettier
-
-With prettier support:
+## For adverity-components 
 
 ```js
 {
-  extends: '@pmedianetwork/eslint-config/prettier',
+  extends: '@pmedianetwork/eslint-config/components',
+};
+```
+
+## For insights
+
+```js
+{
+  extends: '@pmedianetwork/eslint-config/insights',
+};
+```
+
+## For datatap 
+
+```js
+{
+  extends: '@pmedianetwork/eslint-config/datatap',
 };
 ```

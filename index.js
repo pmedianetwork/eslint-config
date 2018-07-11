@@ -2,18 +2,10 @@ module.exports = {
     "parser": "babel-eslint",
     "extends": [
         "airbnb",
-        "plugin:flowtype/recommended"
     ],
     "plugins": [
-        "flowtype",
-        "flowtype-errors",
         "no-only-tests"
     ],
-    "settings": {
-        "flowtype": {
-            "onlyFilesWithFlowAnnotation": true
-        },
-    },
     "env": {
         "browser": true, // We write for browser
         "node": true, // in CommonJS
@@ -115,10 +107,5 @@ module.exports = {
 
         "import/no-extraneous-dependencies": ["error", {"devDependencies": true, "optionalDependencies": false}],
         "import/prefer-default-export": ["off"],
-
-        ////////// FLOWTYPE //////////
-
-        "flowtype-errors/show-errors": "error",
-        "flowtype/delimiter-dangle": ["error", "always-multiline"]
     }
 }
