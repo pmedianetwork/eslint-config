@@ -1,7 +1,5 @@
 module.exports = {
   "extends": [
-    "@pmedianetwork/eslint-config",
-    "prettier",
-    "prettier/react",
+    "@pmedianetwork/eslint-config"
   ]
 }
