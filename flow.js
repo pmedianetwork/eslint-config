@@ -1,6 +1,5 @@
 module.exports = {
   "extends": [
-    "@pmedianetwork/eslint-config",
     "plugin:flowtype/recommended"
   ],
   "plugins": [
