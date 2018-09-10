@@ -11,26 +11,28 @@ Use it by setting the extends field in your `.eslintrc`:
 };
 ```
 
-## For adverity-components 
+## Optionally combine with
+
+### With prettier 
 
 ```js
 {
-  extends: '@pmedianetwork/eslint-config/components',
+  extends: '@pmedianetwork/eslint-config/prettier',
 };
 ```
 
-## For insights
+### With flow
 
 ```js
 {
-  extends: '@pmedianetwork/eslint-config/insights',
+  extends: '@pmedianetwork/eslint-config/flow',
 };
 ```
 
-## For datatap 
+### With typescript 
 
 ```js
 {
-  extends: '@pmedianetwork/eslint-config/datatap',
+  extends: '@pmedianetwork/eslint-config/typescript',
 };
 ```
