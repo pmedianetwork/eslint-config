@@ -3,5 +3,8 @@ module.exports = {
     "prettier",
     "prettier/flowtype",
     "prettier/react",
-  ]
+  ],
+  "rules": {
+    "typescript/member-delimiter-style": "off"
+  }
 }
