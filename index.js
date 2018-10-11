@@ -60,7 +60,7 @@ module.exports = {
         "indent": ["error", 4, { "SwitchCase": 1 }],
         "jsx-quotes": ["error", "prefer-double"],
         "padded-blocks": ["off", "never"],
-        "id-length": ["error", {"exceptions": ["b", "_"]}],
+        "id-length": ["error", {"exceptions": ["_", "x", "y", "z"]}],
         "new-cap": ["error", {
             "newIsCap": true,
             "capIsNew": false,
