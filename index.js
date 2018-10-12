@@ -108,5 +108,25 @@ module.exports = {
 
         "import/no-extraneous-dependencies": ["error", {"devDependencies": true, "optionalDependencies": false}],
         "import/prefer-default-export": ["off"],
-    }
+    },
+    "overrides": [
+        {
+            "files": ["**/*.test.js"],
+            "env": {
+                "jest": true
+            },
+            "rules": {
+                "max-len": "off",
+                "no-unused-expressions": "off",
+                "no-useless-computed-key": "off", // flow does not support non-string property keys https://github.com/facebook/flow/issues/380
+                "react/no-find-dom-node": "off"
+            }
+        },
+        {
+            "files": ["**/stories.js"],
+            "rules": {
+                "max-len": "off"
+            }
+        }
+    ]
 }
