@@ -60,7 +60,7 @@ module.exports = {
         "indent": ["error", 4, { "SwitchCase": 1 }],
         "jsx-quotes": ["error", "prefer-double"],
         "padded-blocks": ["off", "never"],
-        "id-length": ["error", {"exceptions": ["b", "_"]}],
+        "id-length": ["error", {"exceptions": ["_", "x", "y", "z"]}],
         "new-cap": ["error", {
             "newIsCap": true,
             "capIsNew": false,
@@ -102,10 +102,31 @@ module.exports = {
         "jsx-a11y/no-static-element-interactions": "off",
         "jsx-a11y/click-events-have-key-events": "off",
         "jsx-a11y/mouse-events-have-key-events": "off",
+        "jsx-a11y/anchor-is-valid": "off",
 
         ////////// Imports //////////
 
         "import/no-extraneous-dependencies": ["error", {"devDependencies": true, "optionalDependencies": false}],
         "import/prefer-default-export": ["off"],
-    }
+    },
+    "overrides": [
+        {
+            "files": ["**/*.test.*"],
+            "env": {
+                "jest": true
+            },
+            "rules": {
+                "max-len": "off",
+                "no-unused-expressions": "off",
+                "no-useless-computed-key": "off", // flow does not support non-string property keys https://github.com/facebook/flow/issues/380
+                "react/no-find-dom-node": "off"
+            }
+        },
+        {
+            "files": ["**/stories/**", "**/stories.*"],
+            "rules": {
+                "max-len": "off"
+            }
+        }
+    ]
 }
