@@ -111,7 +111,7 @@ module.exports = {
     },
     "overrides": [
         {
-            "files": ["**/*.test.js", "**/*.test.ts"],
+            "files": ["**/*.test.(j|t)s"],
             "env": {
                 "jest": true
             },
