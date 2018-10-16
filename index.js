@@ -123,7 +123,7 @@ module.exports = {
             }
         },
         {
-            "files": ["**/stories.js"],
+            "files": ["**/stories/**", "**/stories.*"],
             "rules": {
                 "max-len": "off"
             }
