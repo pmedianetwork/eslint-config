@@ -18,7 +18,11 @@ module.exports = {
       ],
       "rules": {
         "no-undef": "off",
-        "no-unused-vars": "off"
+        "no-unused-vars": "off",
+        "react/prop-types": "off",
+        "typescript/member-delimiter-style": [2, {
+          "delimiter": "none"
+        }]
       }
     }
   ]
