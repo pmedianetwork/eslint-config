@@ -1,6 +1,6 @@
 {
   "name": "@pmedianetwork/eslint-config",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "Shared ESLint config for pmedianetwork projects.",
   "main": "index.js",
   "scripts": {
