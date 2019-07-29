@@ -4,7 +4,8 @@ module.exports = {
         "airbnb",
     ],
     "plugins": [
-        "no-only-tests"
+        "no-only-tests",
+        "react-hooks"
     ],
     "env": {
         "browser": true, // We write for browser
@@ -78,6 +79,8 @@ module.exports = {
 
         ////////// React //////////
 
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "error",
         "react/jsx-indent-props": ["error", 4],
         "react/jsx-indent": ["error", 4],
         "react/no-access-state-in-setstate": "error",
