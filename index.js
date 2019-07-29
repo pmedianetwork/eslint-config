@@ -85,8 +85,7 @@ module.exports = {
         "react/jsx-filename-extension": ["off"],
         "react/require-default-props": ["off"],
         "react/forbid-prop-types": ["off"],
-        "react/require-extension": ["off"], // TODO update after airbnb solved issues
-        "react/destructuring-assignment": ["off"],
+        "react/destructuring-assignment": ["off", "never"],
         "react/jsx-wrap-multilines": ["error", {
             "declaration": "parens-new-line",
             "assignment": "parens-new-line",
