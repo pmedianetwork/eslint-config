@@ -4,7 +4,8 @@ module.exports = {
         "airbnb",
     ],
     "plugins": [
-        "no-only-tests"
+        "no-only-tests",
+        "react-hooks"
     ],
     "env": {
         "browser": true, // We write for browser
@@ -78,6 +79,8 @@ module.exports = {
 
         ////////// React //////////
 
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "error",
         "react/jsx-indent-props": ["error", 4],
         "react/jsx-indent": ["error", 4],
         "react/no-access-state-in-setstate": "error",
@@ -85,7 +88,7 @@ module.exports = {
         "react/jsx-filename-extension": ["off"],
         "react/require-default-props": ["off"],
         "react/forbid-prop-types": ["off"],
-        "react/require-extension": ["off"], // TODO update after airbnb solved issues
+        "react/destructuring-assignment": ["off", "never"],
         "react/jsx-wrap-multilines": ["error", {
             "declaration": "parens-new-line",
             "assignment": "parens-new-line",
