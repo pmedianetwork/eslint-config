@@ -4,7 +4,6 @@ module.exports = {
   ],
   "plugins": [
     "flowtype",
-    "flowtype-errors"
   ],
   "settings": {
     "flowtype": {
@@ -12,7 +11,6 @@ module.exports = {
     },
   },
   "rules": {
-    "flowtype-errors/show-errors": "error",
     "flowtype/delimiter-dangle": ["error", "always-multiline"]
   }
 }
