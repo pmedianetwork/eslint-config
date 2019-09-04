@@ -50,7 +50,9 @@ module.exports = {
 
         "no-unused-vars": ["error", {
             "args": "after-used",
-            "argsIgnorePattern": "[iI]gnored$"
+            "argsIgnorePattern": "[iI]gnored$",
+            "vars": "local",
+            "varsIgnorePattern": "[iI]gnored$"
         }],
         "no-negated-condition": 2,
 
