@@ -1,6 +1,6 @@
 {
   "name": "@pmedianetwork/eslint-config",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Shared ESLint config for pmedianetwork projects.",
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,6 @@
     "eslint-import-resolver-typescript": "1.1.1",
     "eslint-import-resolver-webpack": "0.11.1",
     "eslint-plugin-flowtype": "3.12.2",
-    "eslint-plugin-flowtype-errors": "4.1.0",
     "eslint-plugin-import": "2.18.2",
     "eslint-plugin-jsx-a11y": "6.2.3",
     "eslint-plugin-no-only-tests": "2.3.1",
