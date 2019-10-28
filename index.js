@@ -91,6 +91,7 @@ module.exports = {
         "react/require-default-props": ["off"],
         "react/forbid-prop-types": ["off"],
         "react/destructuring-assignment": ["off", "never"],
+        "react/jsx-no-useless-fragment": "error",
         "react/jsx-wrap-multilines": ["error", {
             "declaration": "parens-new-line",
             "assignment": "parens-new-line",
