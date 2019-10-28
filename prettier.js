@@ -5,6 +5,6 @@ module.exports = {
     "prettier/react",
   ],
   "rules": {
-    "typescript/member-delimiter-style": "off"
+     "@typescript-eslint/member-delimiter-style": "off"
   }
 }

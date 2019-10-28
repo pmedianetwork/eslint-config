@@ -23,8 +23,10 @@ module.exports = {
         "no-undef": "off",
         "no-unused-vars": "off",
         "react/prop-types": "off",
-        "@typescript-eslint/member-delimiter-style": [2, {
-          "delimiter": "none"
+        "@typescript-eslint/member-delimiter-style": ["error", {
+          "multiline": {
+            "delimiter": "none"
+          }
         }],
         "@typescript-eslint/array-type": ["error", { default: "generic", readonly: "generic" }],
         "@typescript-eslint/camelcase": "off",
