@@ -63,8 +63,6 @@ module.exports = {
 
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "error",
-        "react/jsx-indent-props": ["error", 4],
-        "react/jsx-indent": ["error", 4],
         "react/no-access-state-in-setstate": "error",
         "react/no-multi-comp": ["off", { "ignoreStateless": true }],
         "react/jsx-filename-extension": ["off"],
@@ -72,15 +70,6 @@ module.exports = {
         "react/forbid-prop-types": ["off"],
         "react/destructuring-assignment": ["off", "never"],
         "react/jsx-no-useless-fragment": "error",
-        "react/jsx-wrap-multilines": ["error", {
-            "declaration": "parens-new-line",
-            "assignment": "parens-new-line",
-            "return": "parens-new-line",
-            "arrow": "parens-new-line",
-            "condition": "parens-new-line",
-            "logical": "parens-new-line",
-            "prop": "parens-new-line"
-        }],
 
         ////////// A11Y //////////
 
