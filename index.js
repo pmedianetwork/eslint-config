@@ -27,19 +27,6 @@ module.exports = {
 
         "no-console": "error",
         "no-only-tests/no-only-tests": "error",
-        "no-mixed-operators": [
-            "error",
-            {
-                "groups": [
-                    ["+", "-", "*", "/", "%", "**"],
-                    ["&", "|", "^", "~", "<<", ">>", ">>>"],
-                    ["==", "!=", "===", "!==", ">", ">=", "<", "<="],
-                    ["&&", "||"],
-                    ["in", "instanceof"]
-                ],
-                "allowSamePrecedence": true
-            }
-        ],
 
         ////////// Best Practices //////////
 
