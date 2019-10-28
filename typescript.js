@@ -1,4 +1,7 @@
 module.exports = {
+  "extends": [
+    "prettier/@typescript-eslint"
+  ],
   "settings": {
     "import/resolver": {
       "node": true,
@@ -8,21 +11,29 @@ module.exports = {
   "overrides": [
     {
       "files": ["**/*.ts", "**/*.tsx"],
-      "parser": "typescript-eslint-parser",
+      "parser": '@typescript-eslint/parser',
       "parserOptions": {
         "ecmaVersion": 6,
         "sourceType": "module"
       },
       "plugins": [
-        "typescript"
+        "@typescript-eslint"
       ],
       "rules": {
         "no-undef": "off",
         "no-unused-vars": "off",
         "react/prop-types": "off",
-        "typescript/member-delimiter-style": [2, {
+        "@typescript-eslint/member-delimiter-style": [2, {
           "delimiter": "none"
-        }]
+        }],
+        "@typescript-eslint/array-type": ["error", { default: "generic", readonly: "generic" }],
+        "@typescript-eslint/camelcase": "off",
+        "@typescript-eslint/consistent-type-definitions": ["error", "type"],
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/no-non-null-assertion": "error",
+        "@typescript-eslint/no-require-imports": "error",
+        "@typescript-eslint/no-unused-vars": ["error", { args: "after-used", argsIgnorePattern: "[iI]gnored$" }]
       }
     }
   ]
