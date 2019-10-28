@@ -70,6 +70,7 @@ module.exports = {
             "capIsNewExceptions": ["R$", "List", "Map"]
         }],
         "no-multiple-empty-lines": ["error", { "max": 1 }],
+        "no-unused-expressions": ["error", { "allowTernary": true }],
         "function-paren-newline": "off",
         "object-curly-newline": "off",
 
