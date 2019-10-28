@@ -60,26 +60,16 @@ module.exports = {
 
         ////////// Style //////////
 
-        "semi": ["error", "never"],
-        "max-len": ["error", 120, 2, {"ignoreComments": true}],
-        "indent": ["error", 4, { "SwitchCase": 1 }],
-        "jsx-quotes": ["error", "prefer-double"],
-        "padded-blocks": ["off", "never"],
         "id-length": ["error", {"exceptions": ["_", "x", "y", "z"]}],
         "new-cap": ["error", {
             "newIsCap": true,
             "capIsNew": false,
             "capIsNewExceptions": ["R$", "List", "Map"]
         }],
-        "no-multiple-empty-lines": ["error", { "max": 1 }],
         "no-unused-expressions": ["error", { "allowTernary": true }],
-        "function-paren-newline": "off",
-        "object-curly-newline": "off",
 
         ////////// ECMAScript 6 //////////
 
-        "arrow-body-style": [1],
-        "arrow-parens": ["error", "as-needed", { "requireForBlockBody": false }],
         "prefer-destructuring": "off",
 
         ////////// React //////////
