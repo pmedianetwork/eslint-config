@@ -81,7 +81,7 @@ module.exports = {
 
         ////////// Imports //////////
 
-        "import/extensions": ["error", {
+        "import/extensions": ["error", "always", {
             "js": "never",
             "ts": "never",
             "tsx": "never"
