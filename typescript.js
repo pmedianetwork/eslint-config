@@ -20,6 +20,8 @@ module.exports = {
         "@typescript-eslint"
       ],
       "rules": {
+        "consistent-return": "off",
+        "default-case": "off",
         "no-undef": "off",
         "no-unused-vars": "off",
         "react/prop-types": "off",
