@@ -1,7 +1,7 @@
 # eslint-config
 
 This is pmedianetwork's [ESLint](http://eslint.org) config used for JavaScript projects.
-It is based on [Airbnb's JavaScript Style Guide](https://github.com/airbnb/javascript).
+It is based on [Airbnb's JavaScript Style Guide](https://github.com/airbnb/javascript) and uses `prettier`.
 
 Use it by setting the extends field in your `.eslintrc`:
 
@@ -11,15 +11,7 @@ Use it by setting the extends field in your `.eslintrc`:
 };
 ```
 
-## Optionally combine with
-
-### With prettier 
-
-```js
-{
-  extends: '@pmedianetwork/eslint-config/prettier',
-};
-```
+## Optionally combine
 
 ### With flow
 

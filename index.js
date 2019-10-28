@@ -2,6 +2,8 @@ module.exports = {
     "parser": "babel-eslint",
     "extends": [
         "airbnb",
+        "prettier",
+        "prettier/react",
     ],
     "plugins": [
         "no-only-tests",
@@ -25,19 +27,6 @@ module.exports = {
 
         "no-console": "error",
         "no-only-tests/no-only-tests": "error",
-        "no-mixed-operators": [
-            "error",
-            {
-                "groups": [
-                    ["+", "-", "*", "/", "%", "**"],
-                    ["&", "|", "^", "~", "<<", ">>", ">>>"],
-                    ["==", "!=", "===", "!==", ">", ">=", "<", "<="],
-                    ["&&", "||"],
-                    ["in", "instanceof"]
-                ],
-                "allowSamePrecedence": true
-            }
-        ],
 
         ////////// Best Practices //////////
 
@@ -58,48 +47,29 @@ module.exports = {
 
         ////////// Style //////////
 
-        "semi": ["error", "never"],
-        "max-len": ["error", 120, 2, {"ignoreComments": true}],
-        "indent": ["error", 4, { "SwitchCase": 1 }],
-        "jsx-quotes": ["error", "prefer-double"],
-        "padded-blocks": ["off", "never"],
         "id-length": ["error", {"exceptions": ["_", "x", "y", "z"]}],
         "new-cap": ["error", {
             "newIsCap": true,
             "capIsNew": false,
             "capIsNewExceptions": ["R$", "List", "Map"]
         }],
-        "no-multiple-empty-lines": ["error", { "max": 1 }],
-        "function-paren-newline": "off",
-        "object-curly-newline": "off",
+        "no-unused-expressions": ["error", { "allowTernary": true }],
 
         ////////// ECMAScript 6 //////////
 
-        "arrow-body-style": [1],
-        "arrow-parens": ["error", "as-needed", { "requireForBlockBody": false }],
         "prefer-destructuring": "off",
 
         ////////// React //////////
 
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "error",
-        "react/jsx-indent-props": ["error", 4],
-        "react/jsx-indent": ["error", 4],
         "react/no-access-state-in-setstate": "error",
         "react/no-multi-comp": ["off", { "ignoreStateless": true }],
         "react/jsx-filename-extension": ["off"],
         "react/require-default-props": ["off"],
         "react/forbid-prop-types": ["off"],
         "react/destructuring-assignment": ["off", "never"],
-        "react/jsx-wrap-multilines": ["error", {
-            "declaration": "parens-new-line",
-            "assignment": "parens-new-line",
-            "return": "parens-new-line",
-            "arrow": "parens-new-line",
-            "condition": "parens-new-line",
-            "logical": "parens-new-line",
-            "prop": "parens-new-line"
-        }],
+        "react/jsx-no-useless-fragment": "error",
 
         ////////// A11Y //////////
 
@@ -111,6 +81,11 @@ module.exports = {
 
         ////////// Imports //////////
 
+        "import/extensions": ["error", "always", {
+            "js": "never",
+            "ts": "never",
+            "tsx": "never"
+        }],
         "import/no-extraneous-dependencies": ["error", {"devDependencies": true, "optionalDependencies": false}],
         "import/prefer-default-export": ["off"],
     },
