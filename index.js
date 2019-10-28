@@ -112,6 +112,11 @@ module.exports = {
 
         ////////// Imports //////////
 
+        "import/extensions": ["error", {
+            "js": "never",
+            "ts": "never",
+            "tsx": "never"
+        }],
         "import/no-extraneous-dependencies": ["error", {"devDependencies": true, "optionalDependencies": false}],
         "import/prefer-default-export": ["off"],
     },
