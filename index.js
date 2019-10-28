@@ -2,6 +2,8 @@ module.exports = {
     "parser": "babel-eslint",
     "extends": [
         "airbnb",
+        "prettier",
+        "prettier/react",
     ],
     "plugins": [
         "no-only-tests",

@@ -1,5 +1,6 @@
 module.exports = {
   "extends": [
+    "prettier/flowtype",
     "plugin:flowtype/recommended"
   ],
   "plugins": [
