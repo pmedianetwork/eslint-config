@@ -1,14 +1,14 @@
 {
   "name": "@pmedianetwork/eslint-config",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Shared ESLint config for pmedianetwork projects.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "2.5.0",
-    "@typescript-eslint/parser": "2.5.0",
+    "@typescript-eslint/eslint-plugin": "2.8.0",
+    "@typescript-eslint/parser": "2.8.0",
     "babel-eslint": "10.0.2",
     "eslint": "6.1.0",
     "eslint-config-airbnb": "17.1.1",
