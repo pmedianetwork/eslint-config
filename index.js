@@ -81,21 +81,6 @@ module.exports = {
         "react/destructuring-assignment": ["off", "never"],
         "react/jsx-no-useless-fragment": "error",
 
-        ////////// Ban specific types ///////////
-
-        "@typescript-eslint/ban-types": ["error", {
-            "types": {
-                "Number": {
-                    "message": "Use number instead",
-                    "fixWith": "number"
-                },
-                "String": {
-                    "message": "Use string instead",
-                    "fixWith": "string"
-                }
-            }
-        }],
-
         ////////// A11Y //////////
 
         "jsx-a11y/no-noninteractive-element-interactions": "off",
