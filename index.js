@@ -28,6 +28,16 @@ module.exports = {
         "no-console": "error",
         "no-only-tests/no-only-tests": "error",
 
+        ////////// No Enums ////////////////
+
+        "no-restricted-syntax": [
+            "error",
+            {
+              "selector": "TSEnumDeclaration",
+              "message": "Don't declare enums"
+            }
+        ],
+
         ////////// Best Practices //////////
 
         "guard-for-in": "off",
@@ -70,6 +80,21 @@ module.exports = {
         "react/forbid-prop-types": ["off"],
         "react/destructuring-assignment": ["off", "never"],
         "react/jsx-no-useless-fragment": "error",
+
+        ////////// Ban specific types ///////////
+
+        "@typescript-eslint/ban-types": ["error", {
+            "types": {
+                "Number": {
+                    "message": "Use number instead",
+                    "fixWith": "number"
+                },
+                "String": {
+                    "message": "Use string instead",
+                    "fixWith": "string"
+                }
+            }
+        }],
 
         ////////// A11Y //////////
 
