@@ -28,6 +28,16 @@ module.exports = {
         "no-console": "error",
         "no-only-tests/no-only-tests": "error",
 
+        ////////// No Enums ////////////////
+
+        "no-restricted-syntax": [
+            "error",
+            {
+              "selector": "TSEnumDeclaration",
+              "message": "Don't declare enums"
+            }
+        ],
+
         ////////// Best Practices //////////
 
         "guard-for-in": "off",
