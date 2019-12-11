@@ -22,6 +22,7 @@ module.exports = {
       "rules": {
         "consistent-return": "off",
         "default-case": "off",
+        "no-restricted-syntax": ["error", { "selector": "TSEnumDeclaration", "message": "Don't declare enums" }],
         "no-undef": "off",
         "no-unused-vars": "off",
         "react/prop-types": "off",
