@@ -26,6 +26,7 @@ module.exports = {
         "no-unused-vars": "off",
         "react/prop-types": "off",
         "@typescript-eslint/array-type": ["error", { default: "generic", readonly: "generic" }],
+        "@typescript-eslint/ban-types": "error",
         "@typescript-eslint/camelcase": "off",
         "@typescript-eslint/consistent-type-definitions": ["error", "type"],
         "@typescript-eslint/explicit-function-return-type": "off",
@@ -33,18 +34,6 @@ module.exports = {
         "@typescript-eslint/no-non-null-assertion": "error",
         "@typescript-eslint/no-require-imports": "error",
         "@typescript-eslint/no-unused-vars": ["error", { args: "after-used", argsIgnorePattern: "[iI]gnored$" }],
-        "@typescript-eslint/ban-types": ["error", {
-          "types": {
-              "Number": {
-                  "message": "Use number instead",
-                  "fixWith": "number"
-              },
-              "String": {
-                  "message": "Use string instead",
-                  "fixWith": "string"
-              }
-          }
-      }],
       }
     }
   ]
