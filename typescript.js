@@ -23,6 +23,7 @@ module.exports = {
         "consistent-return": "off",
         "default-case": "off",
         "no-undef": "off",
+        "no-unused-expressions": "off",
         "no-unused-vars": "off",
         "react/prop-types": "off",
         "@typescript-eslint/array-type": ["error", { default: "generic", readonly: "generic" }],
@@ -33,6 +34,7 @@ module.exports = {
         "@typescript-eslint/no-explicit-any": "off",
         "@typescript-eslint/no-non-null-assertion": "error",
         "@typescript-eslint/no-require-imports": "error",
+        "@typescript-eslint/no-unused-expressions": "error",
         "@typescript-eslint/no-unused-vars": ["error", { args: "after-used", argsIgnorePattern: "[iI]gnored$" }],
       }
     }
