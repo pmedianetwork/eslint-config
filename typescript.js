@@ -22,17 +22,21 @@ module.exports = {
       "rules": {
         "consistent-return": "off",
         "default-case": "off",
+        "no-restricted-syntax": ["error", { "selector": "TSEnumDeclaration", "message": "Don't declare enums" }],
         "no-undef": "off",
+        "no-unused-expressions": "off",
         "no-unused-vars": "off",
         "react/prop-types": "off",
         "@typescript-eslint/array-type": ["error", { default: "generic", readonly: "generic" }],
+        "@typescript-eslint/ban-types": "error",
         "@typescript-eslint/camelcase": "off",
         "@typescript-eslint/consistent-type-definitions": ["error", "type"],
         "@typescript-eslint/explicit-function-return-type": "off",
         "@typescript-eslint/no-explicit-any": "off",
         "@typescript-eslint/no-non-null-assertion": "error",
         "@typescript-eslint/no-require-imports": "error",
-        "@typescript-eslint/no-unused-vars": ["error", { args: "after-used", argsIgnorePattern: "[iI]gnored$" }]
+        "@typescript-eslint/no-unused-expressions": "error",
+        "@typescript-eslint/no-unused-vars": ["error", { args: "after-used", argsIgnorePattern: "[iI]gnored$" }],
       }
     }
   ]
