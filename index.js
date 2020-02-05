@@ -4,6 +4,7 @@ module.exports = {
         "airbnb",
         "prettier",
         "prettier/react",
+        "plugin:prettier/recommended"
     ],
     "plugins": [
         "no-only-tests",
@@ -34,6 +35,7 @@ module.exports = {
         "no-param-reassign": ["error", { "props": false }], // as long we have angular code, needed for $scope
         "radix": ["off"],
         "no-use-before-define": ["error", { "functions": false }],
+        "prettier/prettier": "error",
 
         ////////// Variables //////////
 
