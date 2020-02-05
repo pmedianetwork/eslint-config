@@ -1,7 +1,6 @@
 module.exports = {
   "extends": [
-    "prettier/@typescript-eslint",
-    "plugin:prettier/recommended"
+    "prettier/@typescript-eslint"
   ],
   "settings": {
     "import/resolver": {
@@ -21,7 +20,6 @@ module.exports = {
         "@typescript-eslint"
       ],
       "rules": {
-        "prettier/prettier": "error",
         "consistent-return": "off",
         "default-case": "off",
         "no-restricted-syntax": ["error", { "selector": "TSEnumDeclaration", "message": "Don't declare enums" }],
