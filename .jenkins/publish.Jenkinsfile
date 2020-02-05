@@ -8,6 +8,14 @@ pipeline {
     environment {
         NODE_VERSION = getNodeVersion()
     }
+    parameters {
+        validatingString(
+            name: "CONFIRMATION",
+            regex: /^yes$/,
+            failedValidationMessage: "Please type 'yes' to confirm.",
+            description: "Are you sure you want to make a release?"
+        )
+    }
     stages {
         stage('Publish') {
             environment {
