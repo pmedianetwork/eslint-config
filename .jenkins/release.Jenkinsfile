@@ -45,7 +45,7 @@ pipeline {
         success {
             slackSend(
                 color: 'good',
-                message: "Version ${releaseVersion} of adverity-components was released! :tada: (${releaseUrl})",
+                message: "Version ${releaseVersion} of eslint-config was released! :tada: (${releaseUrl})",
                 channel: 'dev-frontend'
             )
         }
