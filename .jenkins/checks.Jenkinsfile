@@ -1,5 +1,5 @@
 pipeline {
-    libraries { lib 'adverity-shared-library@1.0.2' }
+    libraries { lib 'adverity-shared-library@1.1.0' }
     agent { label "PRJob" }
     stages {
         stage('Validate changesets') {
