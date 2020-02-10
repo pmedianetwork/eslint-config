@@ -28,3 +28,8 @@ Use it by setting the extends field in your `.eslintrc`:
   extends: '@pmedianetwork/eslint-config/typescript',
 };
 ```
+
+
+## Release Management
+
+See http://handbook.adverity.net/changesets/#the-library-changesets-workflow
