@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Validate changesets') {
             steps {
-                validateChangesets()
+                validateChangesets isNewChangesetRequired: false
                 echo generateReleaseNote()
             }
         }
