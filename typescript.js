@@ -29,6 +29,7 @@ module.exports = {
         "react/prop-types": "off",
         "@typescript-eslint/array-type": ["error", { default: "generic", readonly: "generic" }],
         "@typescript-eslint/ban-types": "error",
+        "@typescript-eslint/ban-ts-ignore": "error",
         "@typescript-eslint/camelcase": "off",
         "@typescript-eslint/consistent-type-definitions": ["error", "type"],
         "@typescript-eslint/explicit-function-return-type": "off",
