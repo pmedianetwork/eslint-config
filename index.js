@@ -31,6 +31,7 @@ module.exports = {
 
         ////////// Best Practices //////////
 
+        "eqeqeq": ["error", "always"],
         "guard-for-in": "off",
         "no-param-reassign": ["error", { "props": false }], // as long we have angular code, needed for $scope
         "radix": ["off"],
