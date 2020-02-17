@@ -59,6 +59,7 @@ module.exports = {
 
         ////////// ECMAScript 6 //////////
 
+        "arrow-body-style": ["error", "as-needed"],
         "prefer-destructuring": "off",
 
         ////////// React //////////
