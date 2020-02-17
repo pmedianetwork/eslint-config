@@ -67,6 +67,7 @@ module.exports = {
         "react-hooks/exhaustive-deps": "error",
         "react/no-access-state-in-setstate": "error",
         "react/no-multi-comp": ["off", { "ignoreStateless": true }],
+        "react/no-this-in-sfc": "off",
         "react/jsx-filename-extension": ["off"],
         "react/require-default-props": ["off"],
         "react/forbid-prop-types": ["off"],
