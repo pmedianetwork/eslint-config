@@ -33,7 +33,9 @@ pipeline {
                 stage('Release') {
                     steps {
                         gitFlowRelease(version: releaseVersion) {
-                            sh "npm version ${releaseVersion} --no-git-tag-version"
+                            nvm(env.NODE_VERSION) {
+                                sh "npm version ${releaseVersion} --no-git-tag-version"
+                            }
                             cleanChangesets()
                         }
                         script {
