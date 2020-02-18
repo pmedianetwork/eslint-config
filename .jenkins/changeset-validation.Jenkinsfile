@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Validate changesets') {
             steps {
-                validateChangesets()
+                validateChangesets requiredKeys: ['issue']
                 echo generateReleaseNote(collapseNonTyped: true)
             }
         }
