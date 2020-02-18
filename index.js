@@ -91,8 +91,8 @@ module.exports = {
             "ts": "never",
             "tsx": "never"
         }],
+        "import/no-default-export": "error",
         "import/no-extraneous-dependencies": ["error", {"devDependencies": true, "optionalDependencies": false}],
-        "import/prefer-default-export": ["off"],
     },
     "overrides": [
         {
