@@ -26,7 +26,7 @@ pipeline {
                     steps {
                         script {
                             releaseVersion = computeNextSemanticVersion(currentVersion: env.CURRENT_VERSION)
-                            releaseNoteBody = generateReleaseNote()
+                            releaseNoteBody = generateReleaseNote(collapseNonTyped: true)
                         }
                     }
                 }
