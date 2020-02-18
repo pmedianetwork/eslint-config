@@ -4,6 +4,7 @@ module.exports = {
         "airbnb",
         "prettier",
         "prettier/react",
+        "plugin:prettier/recommended"
     ],
     "plugins": [
         "no-only-tests",
@@ -30,10 +31,12 @@ module.exports = {
 
         ////////// Best Practices //////////
 
+        "eqeqeq": ["error", "always"],
         "guard-for-in": "off",
         "no-param-reassign": ["error", { "props": false }], // as long we have angular code, needed for $scope
         "radix": ["off"],
         "no-use-before-define": ["error", { "functions": false }],
+        "prettier/prettier": "error",
 
         ////////// Variables //////////
 
@@ -57,6 +60,7 @@ module.exports = {
 
         ////////// ECMAScript 6 //////////
 
+        "arrow-body-style": ["error", "as-needed"],
         "prefer-destructuring": "off",
 
         ////////// React //////////
@@ -65,6 +69,7 @@ module.exports = {
         "react-hooks/exhaustive-deps": "error",
         "react/no-access-state-in-setstate": "error",
         "react/no-multi-comp": ["off", { "ignoreStateless": true }],
+        "react/no-this-in-sfc": "off",
         "react/jsx-filename-extension": ["off"],
         "react/require-default-props": ["off"],
         "react/forbid-prop-types": ["off"],
