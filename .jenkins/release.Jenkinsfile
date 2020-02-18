@@ -3,7 +3,7 @@ def releaseVersion
 def releaseUrl
 
 pipeline {
-    libraries { lib 'adverity-shared-library@1.1.0' }
+    libraries { lib 'adverity-shared-library@2.1.0' }
     agent { label "PRJob" }
     environment {
         NODE_VERSION = getNodeVersion()
