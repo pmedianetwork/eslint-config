@@ -57,12 +57,11 @@ pipeline {
                 message: "Version ${releaseVersion} of eslint-config was released! :tada: (${releaseUrl})",
                 channel: 'dev-frontend'
             )
+            cleanWs()
+
         }
         failure {
             notifySlack channel: 'dev-frontend'
-        }
-        cleanup {
-            cleanWs()
         }
     }
 }
