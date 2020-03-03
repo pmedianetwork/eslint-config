@@ -8,7 +8,8 @@ module.exports = {
     ],
     "plugins": [
         "no-only-tests",
-        "react-hooks"
+        "react-hooks",
+        "smart-import"
     ],
     "env": {
         "browser": true, // We write for browser
@@ -26,8 +27,8 @@ module.exports = {
 
         ////////// Possible Errors //////////
 
-        "eslint-plugin-smart-import/no-absolute-internal-imports": 1,
-        "eslint-plugin-smart-import/no-parent-imports": 1,
+        "smart-import/no-absolute-internal-imports": 1,
+        "smart-import/no-parent-imports": 1,
         "no-console": "error",
         "no-only-tests/no-only-tests": "error",
 
