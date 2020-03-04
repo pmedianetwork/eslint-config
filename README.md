@@ -7,7 +7,7 @@ Use it by setting the extends field in your `.eslintrc`:
 
 ```js
 {
-  extends: '@pmedianetwork/recommended',
+  extends: 'pmedianetwork/recommended',
 };
 ```
 
@@ -17,7 +17,7 @@ Use it by setting the extends field in your `.eslintrc`:
 
 ```js
 {
-  extends: '@pmedianetwork/flow',
+  extends: 'pmedianetwork/flow',
 };
 ```
 
@@ -25,7 +25,7 @@ Use it by setting the extends field in your `.eslintrc`:
 
 ```js
 {
-  extends: '@pmedianetwork/typescript',
+  extends: 'pmedianetwork/typescript',
 };
 ```
 

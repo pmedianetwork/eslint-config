@@ -1,5 +1,5 @@
 {
-  "name": "@pmedianetwork/eslint-plugin",
+  "name": "eslint-plugin-pmedianetwork",
   "version": "4.0.0",
   "description": "Shared ESLint config for pmedianetwork projects.",
   "author": "pmedianetwork",
