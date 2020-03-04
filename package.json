@@ -1,12 +1,15 @@
 {
-  "name": "@pmedianetwork/eslint-config",
-  "version": "3.2.0",
+  "name": "eslint-plugin-pmedianetwork",
+  "version": "4.0.0",
   "description": "Shared ESLint config for pmedianetwork projects.",
+  "author": "pmedianetwork",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha ./tests/**/*.js -w"
   },
   "dependencies": {
+    "eslint-module-utils": "^2.5.2",
+    "requireindex": "~1.1.0",
     "@typescript-eslint/eslint-plugin": "2.10.0",
     "@typescript-eslint/parser": "2.10.0",
     "babel-eslint": "10.0.3",
@@ -23,14 +26,11 @@
     "eslint-plugin-react": "7.16.0",
     "eslint-plugin-react-hooks": "2.2.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/pmedianetwork/eslint-config.git"
+  "devDependencies": {
+    "mocha": "7.1.0"
   },
-  "author": "",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/pmedianetwork/eslint-config/issues"
+  "engines": {
+    "node": ">=0.10.0"
   },
-  "homepage": "https://github.com/pmedianetwork/eslint-config#readme"
+  "license": "ISC"
 }
