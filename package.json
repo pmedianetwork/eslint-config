@@ -22,7 +22,7 @@
     "eslint-plugin-prettier": "3.1.2",
     "eslint-plugin-react": "7.16.0",
     "eslint-plugin-react-hooks": "2.2.0",
-    "eslint-plugin-smart-import": "git+ssh://git@github.com/adamgajzlerowicz/sensible-imports.git"
+    "eslint-plugin-smart-import": "github:adamgajzlerowicz/sensible-imports"
   },
   "repository": {
     "type": "git",
