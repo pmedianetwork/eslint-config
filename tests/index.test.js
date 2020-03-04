@@ -1,10 +1,5 @@
 const { configs, rules } = require('../index');
-
-const checkExists = input => {
-    if (!input) {
-        throw new Error('module is not defined')
-    }
-};
+const { checkExists } = require('../utils');
 
 describe("main export", () => {
     it('has rules', () => {
@@ -19,4 +14,4 @@ describe("main export", () => {
         checkExists(configs.flow);
         checkExists(configs.typescript);
     })
-})
+});
