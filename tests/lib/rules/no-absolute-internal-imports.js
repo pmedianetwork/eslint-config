@@ -40,6 +40,11 @@ ruleTester.run("no-absolute-internal-imports", rule, {
             code: 'import foo from "components/Bar";',
             filename: testFilePath('/foo/bar/src/components/Foo/index.js'),
         },
+        {
+            code: 'import initStoryshots from "@storybook/addon-storyshots"',
+            filename: testFilePath('src/storyshots.test.js'),
+        },
+
     ],
 
     invalid: [
