@@ -8,8 +8,8 @@
     "test": "mocha ./tests/**/*.js -w"
   },
   "dependencies": {
-    "eslint-module-utils": "^2.5.2",
-    "requireindex": "~1.1.0",
+    "eslint-module-utils": "2.5.2",
+    "requireindex": "1.1.0",
     "@typescript-eslint/eslint-plugin": "2.10.0",
     "@typescript-eslint/parser": "2.10.0",
     "babel-eslint": "10.0.3",
