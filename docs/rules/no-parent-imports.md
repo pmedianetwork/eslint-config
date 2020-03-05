@@ -1,38 +1,35 @@
-TODO
+# no-parent-imports
 
-# This will disallow imports that contain ../.. (no-parent-imports)
+This will disallow imports that contain ../.. 
 
-Please describe the origin of the rule here.
+### Rule Details
 
+When we want to go to far up to import a module, we should use an absolute import.
 
-## Rule Details
-
-This rule aims to...
-
-Examples of **incorrect** code for this rule:
+### Examples of **incorrect** code for this rule:
 
 ```js
-
-// fill me in
-
+import foo from "../foo";
 ```
-
-Examples of **correct** code for this rule:
 
 ```js
-
-// fill me in
-
+import foo from "./foo";
 ```
 
-### Options
+```js
+import foo from ".";
+```
 
-If there are any options, describe them here. Otherwise, delete this section.
+```js
+import foo from "./foo/bar";
+```
 
-## When Not To Use It
+### Examples of **correct** code for this rule:
 
-Give a short description of when it would be appropriate to turn off this rule.
+```js
+import foo from "../../foo/bar";
+```
 
-## Further Reading
-
-If there are other links that describe the issue this rule addresses, please include them here in a bulleted list.
+```js
+import foo from "../../../foo/bar";
+```

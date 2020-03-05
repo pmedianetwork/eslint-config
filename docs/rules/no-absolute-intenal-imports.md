@@ -1,38 +1,35 @@
-TODO
+# no-absolute-internal-imports
 
-# xx (no-absolute-internal-imports)
+Rule which will help to keep track of incorrect imports
 
-Please describe the origin of the rule here.
+### Rule Details
 
+When we want to import a file which is internal a feature, we want to use relative path instead of absolute.
 
-## Rule Details
+### Examples of **incorrect** code for this rule:
 
-This rule aims to...
-
-Examples of **incorrect** code for this rule:
-
+Assuming that we call import from `/src/components/Foo/index.js`:
 ```js
-
-// fill me in
-
+import foo from "components/Foo/utils";
 ```
 
-Examples of **correct** code for this rule:
-
 ```js
-
-// fill me in
-
+import foo from "components/Foo/utils/bar/baz";
 ```
 
-### Options
+```js
+import foo from "components/Foo/components/Bar";
+```
 
-If there are any options, describe them here. Otherwise, delete this section.
+### Examples of **correct** code for this rule:
 
-## When Not To Use It
+Assuming that we call import from `/src/components/Foo/index.js`:
 
-Give a short description of when it would be appropriate to turn off this rule.
+```js
+import foo from ".";
+```
 
-## Further Reading
+```js
+import foo from "components/Bar";
+```
 
-If there are other links that describe the issue this rule addresses, please include them here in a bulleted list.

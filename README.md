@@ -33,3 +33,7 @@ Use it by setting the extends field in your `.eslintrc`:
 ## Release Management
 
 See http://handbook.adverity.net/changesets/#the-library-changesets-workflow
+
+## Testing
+
+To run tests run `npm run test`

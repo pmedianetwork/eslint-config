@@ -37,7 +37,11 @@ ruleTester.run("no-absolute-internal-imports", rule, {
             filename: testFilePath('/foo/bar/src/components/Foo/index.js'),
         },
         {
-            code: 'import foo from "components/Bar";',
+            code: 'import foo from "./utils";',
+            filename: testFilePath('/foo/bar/src/components/Foo/index.js'),
+        },
+        {
+            code: 'import foo from "./utils/common";',
             filename: testFilePath('/foo/bar/src/components/Foo/index.js'),
         },
         {
