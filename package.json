@@ -32,5 +32,12 @@
     "jest": "25.1.0",
     "prettier": "^1.19.1"
   },
-  "license": "ISC"
+  "license": "MIT",
+  "prettier": {
+    "printWidth": 120,
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "tabWidth": 4
+  }
 }
