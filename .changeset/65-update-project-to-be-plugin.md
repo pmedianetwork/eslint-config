@@ -1,5 +1,5 @@
 ---
-issue: https://github.com/pmedianetwork/adverity-presense-frontend/issues/327
+issue: https://github.com/pmedianetwork/eslint-config/issues/65
 type: major
 ---
 
