@@ -5,11 +5,10 @@
   "author": "pmedianetwork",
   "main": "index.js",
   "scripts": {
-    "test": "mocha ./tests/**/*.js -w"
+    "test": "jest --watch"
   },
   "dependencies": {
     "eslint-module-utils": "2.5.2",
-    "requireindex": "1.1.0",
     "@typescript-eslint/eslint-plugin": "2.10.0",
     "@typescript-eslint/parser": "2.10.0",
     "babel-eslint": "10.0.3",
@@ -27,7 +26,7 @@
     "eslint-plugin-react-hooks": "2.2.0"
   },
   "devDependencies": {
-    "mocha": "7.1.0"
+    "jest": "25.1.0"
   },
   "license": "ISC"
 }

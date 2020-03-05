@@ -1,5 +1,5 @@
 const { testFilePath } = require("../../../utils");
-const rule = require("../../../lib/rules/no-absolute-internal-imports");
+const { noAbsoluteInternalImports } = require("../../../lib/rules/no-absolute-internal-imports");
 const RuleTester = require("eslint").RuleTester;
 
 RuleTester.setDefaultConfig({
@@ -10,7 +10,8 @@ RuleTester.setDefaultConfig({
 });
 
 const ruleTester = new RuleTester();
-ruleTester.run("no-absolute-internal-imports", rule, {
+
+ruleTester.run("no-absolute-internal-imports", noAbsoluteInternalImports, {
     valid: [
         {
             code: 'import foo from "react";',
@@ -56,29 +57,30 @@ ruleTester.run("no-absolute-internal-imports", rule, {
             code: 'import foo from "components/Foo";',
             filename: testFilePath('/foo/bar/src/components/Foo/index.js'),
             errors: [{
-                message: rule.message,
+                message: noAbsoluteInternalImports.message,
             }]
         },
         {
             code: 'import foo from "components/Foo/utils";',
             filename: testFilePath('src/components/Foo/index.js'),
             errors: [{
-                message: rule.message,
+                message: noAbsoluteInternalImports.message,
             }]
         },
         {
             code: 'import foo from "components/Foo/utils/bar";',
             filename: testFilePath('src/components/Foo/index.js'),
             errors: [{
-                message: rule.message,
+                message: noAbsoluteInternalImports.message,
             }]
         },
         {
             code: 'import foo from "components/Foo/utils/bar/baz";',
             filename: testFilePath('src/components/Foo/index.js'),
             errors: [{
-                message: rule.message,
+                message: noAbsoluteInternalImports.message,
             }]
         },
     ]
 });
+

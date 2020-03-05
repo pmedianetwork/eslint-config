@@ -1,4 +1,4 @@
-const rule = require("../../../lib/rules/no-parent-imports");
+const { noParentImports } = require("../../../lib/rules/no-parent-imports");
 const RuleTester = require("eslint").RuleTester;
 
 RuleTester.setDefaultConfig({
@@ -10,7 +10,7 @@ RuleTester.setDefaultConfig({
 
 const ruleTester = new RuleTester();
 
-ruleTester.run("no-parent-imports", rule, {
+ruleTester.run("no-parent-imports", noParentImports, {
     valid: [
         'import React from "react";',
         'import foo from "../foo";',
@@ -21,13 +21,13 @@ ruleTester.run("no-parent-imports", rule, {
         {
             code: 'import foo from "../../../foo";',
             errors: [{
-                message: rule.message,
+                message: noParentImports.message,
             }]
         },
         {
             code: 'import foo from "../../foo";',
             errors: [{
-                message: rule.message,
+                message: noParentImports.message,
             }]
         },
     ]

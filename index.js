@@ -1,9 +1,8 @@
-const requireIndex = require("requireindex");
+const { noAbsoluteInternalImports } = require('./lib/rules/no-absolute-internal-imports');
+const { noParentImports } = require('./lib/rules/no-parent-imports');
 const { typescript } = require('./lib/configs/typescript');
 const { flow } = require('./lib/configs/flow');
 const { recommended } = require('./lib/configs/recommended');
-
-const rules = requireIndex(__dirname + "/lib/rules");
 
 module.exports = {
     configs: {
@@ -11,7 +10,10 @@ module.exports = {
         recommended,
         flow
     },
-    rules
+    rules: {
+        'no-absolute-internal-imports': noAbsoluteInternalImports,
+        'no-parent-imports': noParentImports
+    }
 };
 
 
