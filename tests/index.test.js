@@ -14,4 +14,8 @@ describe('main export', () => {
         checkExists(configs.flow)
         checkExists(configs.typescript)
     })
+
+    it('has correct shapshot', () => {
+        expect(configs.recommended).toMatchSnapshot()
+    })
 })

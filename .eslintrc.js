@@ -1,3 +1,3 @@
-const { recommended } = require('./lib/configs/recommended');
+const { baseRecommendedConfig } = require('./lib/configs/recommended');
 
-module.exports = recommended;
+module.exports = baseRecommendedConfig;
