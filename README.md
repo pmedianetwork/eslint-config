@@ -3,11 +3,15 @@
 This is pmedianetwork's [ESLint](http://eslint.org) config used for JavaScript projects.
 It is based on [Airbnb's JavaScript Style Guide](https://github.com/airbnb/javascript) and uses `prettier`.
 
+## Installation
+
+`npm install --save-dev pmedianetwork/eslint-config`
+
 Use it by setting the extends field in your `.eslintrc`:
 
 ```js
 {
-  extends: 'pmedianetwork/recommended',
+  extends: 'plugin:@pmedianetwork/recommended',
 };
 ```
 
@@ -17,7 +21,7 @@ Use it by setting the extends field in your `.eslintrc`:
 
 ```js
 {
-  extends: 'pmedianetwork/flow',
+  extends: 'plugin:@pmedianetwork/flow',
 };
 ```
 
@@ -25,7 +29,7 @@ Use it by setting the extends field in your `.eslintrc`:
 
 ```js
 {
-  extends: 'pmedianetwork/typescript',
+  extends: 'plugin:@pmedianetwork/typescript',
 };
 ```
 
