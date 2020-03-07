@@ -17,5 +17,7 @@ describe('main export', () => {
 
     it('has correct shapshot', () => {
         expect(configs.recommended).toMatchSnapshot()
+        expect(configs.flow).toMatchSnapshot()
+        expect(configs.typescript).toMatchSnapshot()
     })
 })
