@@ -27,7 +27,14 @@
     "eslint-plugin-react": "7.16.0",
     "eslint-plugin-react-hooks": "2.2.0"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint",
+      "pre-push": "npm test"
+    }
+  },
   "devDependencies": {
+    "husky": "4.2.3",
     "jest": "25.1.0",
     "prettier": "1.19.1"
   },
