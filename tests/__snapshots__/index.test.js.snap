@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`main export has correct shapshot 1`] = `
+exports[`main export has correct shapshots 1`] = `
 Object {
   "env": Object {
     "browser": true,
@@ -47,11 +47,13 @@ Object {
     "sourceType": "module",
   },
   "plugins": Array [
-    "pmedianetwork",
+    "@pmedianetwork",
     "no-only-tests",
     "react-hooks",
   ],
   "rules": Object {
+    "@pmedianetwork/no-absolute-internal-imports": 1,
+    "@pmedianetwork/no-parent-imports": 1,
     "arrow-body-style": Array [
       "error",
       "as-needed",
@@ -138,8 +140,6 @@ Object {
         "functions": false,
       },
     ],
-    "pmedianetwork/no-absolute-internal-imports": 1,
-    "pmedianetwork/no-parent-imports": 1,
     "prefer-destructuring": "off",
     "prettier/prettier": "error",
     "radix": Array [
@@ -169,6 +169,100 @@ Object {
     "react/require-default-props": Array [
       "off",
     ],
+  },
+}
+`;
+
+exports[`main export has correct shapshots 2`] = `
+Object {
+  "extends": Array [
+    "prettier/flowtype",
+    "plugin:flowtype/recommended",
+  ],
+  "plugins": Array [
+    "flowtype",
+  ],
+  "rules": Object {
+    "flowtype/delimiter-dangle": Array [
+      "error",
+      "always-multiline",
+    ],
+  },
+  "settings": Object {
+    "flowtype": Object {
+      "onlyFilesWithFlowAnnotation": true,
+    },
+  },
+}
+`;
+
+exports[`main export has correct shapshots 3`] = `
+Object {
+  "extends": Array [
+    "prettier/@typescript-eslint",
+  ],
+  "overrides": Array [
+    Object {
+      "files": Array [
+        "**/*.ts",
+        "**/*.tsx",
+      ],
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": Object {
+        "ecmaVersion": 6,
+        "sourceType": "module",
+      },
+      "plugins": Array [
+        "@typescript-eslint",
+      ],
+      "rules": Object {
+        "@typescript-eslint/array-type": Array [
+          "error",
+          Object {
+            "default": "generic",
+            "readonly": "generic",
+          },
+        ],
+        "@typescript-eslint/ban-ts-ignore": "error",
+        "@typescript-eslint/ban-types": "error",
+        "@typescript-eslint/camelcase": "off",
+        "@typescript-eslint/consistent-type-definitions": Array [
+          "error",
+          "type",
+        ],
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/no-non-null-assertion": "error",
+        "@typescript-eslint/no-require-imports": "error",
+        "@typescript-eslint/no-unused-expressions": "error",
+        "@typescript-eslint/no-unused-vars": Array [
+          "error",
+          Object {
+            "args": "after-used",
+            "argsIgnorePattern": "[iI]gnored$",
+          },
+        ],
+        "consistent-return": "off",
+        "default-case": "off",
+        "no-restricted-syntax": Array [
+          "error",
+          Object {
+            "message": "Don't declare enums",
+            "selector": "TSEnumDeclaration",
+          },
+        ],
+        "no-undef": "off",
+        "no-unused-expressions": "off",
+        "no-unused-vars": "off",
+        "react/prop-types": "off",
+      },
+    },
+  ],
+  "settings": Object {
+    "import/resolver": Object {
+      "eslint-import-resolver-typescript": true,
+      "node": true,
+    },
   },
 }
 `;
