@@ -1,0 +1,268 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`main export has correct shapshots 1`] = `
+Object {
+  "env": Object {
+    "browser": true,
+    "es6": true,
+    "node": true,
+  },
+  "extends": Array [
+    "airbnb",
+    "prettier",
+    "prettier/react",
+    "plugin:prettier/recommended",
+  ],
+  "overrides": Array [
+    Object {
+      "env": Object {
+        "jest": true,
+      },
+      "files": Array [
+        "**/*.test.*",
+      ],
+      "rules": Object {
+        "max-len": "off",
+        "no-unused-expressions": "off",
+        "no-useless-computed-key": "off",
+        "react/no-find-dom-node": "off",
+      },
+    },
+    Object {
+      "files": Array [
+        "**/stories/**",
+        "**/stories.*",
+      ],
+      "rules": Object {
+        "max-len": "off",
+      },
+    },
+  ],
+  "parser": "babel-eslint",
+  "parserOptions": Object {
+    "ecmaFeatures": Object {
+      "jsx": true,
+    },
+    "ecmaVersion": 6,
+    "sourceType": "module",
+  },
+  "plugins": Array [
+    "@pmedianetwork",
+    "no-only-tests",
+    "react-hooks",
+  ],
+  "rules": Object {
+    "@pmedianetwork/no-absolute-internal-imports": 1,
+    "@pmedianetwork/no-parent-imports": 1,
+    "arrow-body-style": Array [
+      "error",
+      "as-needed",
+    ],
+    "eqeqeq": Array [
+      "error",
+      "always",
+    ],
+    "guard-for-in": "off",
+    "id-length": Array [
+      "error",
+      Object {
+        "exceptions": Array [
+          "_",
+          "x",
+          "y",
+          "z",
+        ],
+      },
+    ],
+    "import/extensions": Array [
+      "error",
+      "always",
+      Object {
+        "js": "never",
+        "ts": "never",
+        "tsx": "never",
+      },
+    ],
+    "import/no-extraneous-dependencies": Array [
+      "error",
+      Object {
+        "devDependencies": true,
+        "optionalDependencies": false,
+      },
+    ],
+    "import/prefer-default-export": Array [
+      "off",
+    ],
+    "jsx-a11y/anchor-is-valid": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/mouse-events-have-key-events": "off",
+    "jsx-a11y/no-noninteractive-element-interactions": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "new-cap": Array [
+      "error",
+      Object {
+        "capIsNew": false,
+        "capIsNewExceptions": Array [
+          "R$",
+          "List",
+          "Map",
+        ],
+        "newIsCap": true,
+      },
+    ],
+    "no-console": "error",
+    "no-negated-condition": 2,
+    "no-only-tests/no-only-tests": "error",
+    "no-param-reassign": Array [
+      "error",
+      Object {
+        "props": false,
+      },
+    ],
+    "no-unused-expressions": Array [
+      "error",
+      Object {
+        "allowTernary": true,
+      },
+    ],
+    "no-unused-vars": Array [
+      "error",
+      Object {
+        "args": "after-used",
+        "argsIgnorePattern": "[iI]gnored$",
+        "vars": "local",
+        "varsIgnorePattern": "[iI]gnored$",
+      },
+    ],
+    "no-use-before-define": Array [
+      "error",
+      Object {
+        "functions": false,
+      },
+    ],
+    "prefer-destructuring": "off",
+    "prettier/prettier": "error",
+    "radix": Array [
+      "off",
+    ],
+    "react-hooks/exhaustive-deps": "error",
+    "react-hooks/rules-of-hooks": "error",
+    "react/destructuring-assignment": Array [
+      "off",
+      "never",
+    ],
+    "react/forbid-prop-types": Array [
+      "off",
+    ],
+    "react/jsx-filename-extension": Array [
+      "off",
+    ],
+    "react/jsx-no-useless-fragment": "error",
+    "react/no-access-state-in-setstate": "error",
+    "react/no-multi-comp": Array [
+      "off",
+      Object {
+        "ignoreStateless": true,
+      },
+    ],
+    "react/no-this-in-sfc": "off",
+    "react/require-default-props": Array [
+      "off",
+    ],
+  },
+}
+`;
+
+exports[`main export has correct shapshots 2`] = `
+Object {
+  "extends": Array [
+    "prettier/flowtype",
+    "plugin:flowtype/recommended",
+  ],
+  "plugins": Array [
+    "flowtype",
+  ],
+  "rules": Object {
+    "flowtype/delimiter-dangle": Array [
+      "error",
+      "always-multiline",
+    ],
+  },
+  "settings": Object {
+    "flowtype": Object {
+      "onlyFilesWithFlowAnnotation": true,
+    },
+  },
+}
+`;
+
+exports[`main export has correct shapshots 3`] = `
+Object {
+  "extends": Array [
+    "prettier/@typescript-eslint",
+  ],
+  "overrides": Array [
+    Object {
+      "files": Array [
+        "**/*.ts",
+        "**/*.tsx",
+      ],
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": Object {
+        "ecmaVersion": 6,
+        "sourceType": "module",
+      },
+      "plugins": Array [
+        "@typescript-eslint",
+      ],
+      "rules": Object {
+        "@typescript-eslint/array-type": Array [
+          "error",
+          Object {
+            "default": "generic",
+            "readonly": "generic",
+          },
+        ],
+        "@typescript-eslint/ban-ts-ignore": "error",
+        "@typescript-eslint/ban-types": "error",
+        "@typescript-eslint/camelcase": "off",
+        "@typescript-eslint/consistent-type-definitions": Array [
+          "error",
+          "type",
+        ],
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/no-non-null-assertion": "error",
+        "@typescript-eslint/no-require-imports": "error",
+        "@typescript-eslint/no-unused-expressions": "error",
+        "@typescript-eslint/no-unused-vars": Array [
+          "error",
+          Object {
+            "args": "after-used",
+            "argsIgnorePattern": "[iI]gnored$",
+          },
+        ],
+        "consistent-return": "off",
+        "default-case": "off",
+        "no-restricted-syntax": Array [
+          "error",
+          Object {
+            "message": "Don't declare enums",
+            "selector": "TSEnumDeclaration",
+          },
+        ],
+        "no-undef": "off",
+        "no-unused-expressions": "off",
+        "no-unused-vars": "off",
+        "react/prop-types": "off",
+      },
+    },
+  ],
+  "settings": Object {
+    "import/resolver": Object {
+      "eslint-import-resolver-typescript": true,
+      "node": true,
+    },
+  },
+}
+`;

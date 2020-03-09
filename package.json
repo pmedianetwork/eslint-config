@@ -1,12 +1,16 @@
 {
-  "name": "@pmedianetwork/eslint-config",
+  "name": "@pmedianetwork/eslint-plugin",
   "version": "3.2.0",
   "description": "Shared ESLint config for pmedianetwork projects.",
+  "author": "pmedianetwork",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --watch",
+    "lint": "eslint tests/**/*.js lib/**/*.js index.js",
+    "lint:fix": "npm run lint -- --fix"
   },
   "dependencies": {
+    "eslint-module-utils": "2.5.2",
     "@typescript-eslint/eslint-plugin": "2.10.0",
     "@typescript-eslint/parser": "2.10.0",
     "babel-eslint": "10.0.3",
@@ -23,14 +27,23 @@
     "eslint-plugin-react": "7.16.0",
     "eslint-plugin-react-hooks": "2.2.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/pmedianetwork/eslint-config.git"
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint",
+      "pre-push": "jest"
+    }
   },
-  "author": "",
+  "devDependencies": {
+    "husky": "4.2.3",
+    "jest": "25.1.0",
+    "prettier": "1.19.1"
+  },
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/pmedianetwork/eslint-config/issues"
-  },
-  "homepage": "https://github.com/pmedianetwork/eslint-config#readme"
+  "prettier": {
+    "printWidth": 120,
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "tabWidth": 4
+  }
 }
