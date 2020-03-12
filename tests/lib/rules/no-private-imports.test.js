@@ -31,6 +31,7 @@ ruleTester.run('no-private-imports', noPrivateImports, {
         makeTestItem('import foo from "components"'),
         makeTestItem('import foo from "react"'),
         makeTestItem('import { foo } from "features"'),
+        makeTestItem('import foo from "../foo"'),
     ],
     invalid: [
         makeTestItem('import { foo } from "features/foo/bar"', [
