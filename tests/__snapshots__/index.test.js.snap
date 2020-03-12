@@ -1,12 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`main export has constants 1`] = `
-Object {
-  "configKey": "@pmedianetwork",
-  "moduleNamespaces": "moduleNamespaces",
-}
-`;
-
 exports[`main export has correct snapshots 1`] = `
 Object {
   "env": Object {

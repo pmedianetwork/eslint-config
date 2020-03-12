@@ -28,14 +28,18 @@ import foo from 'something/foo/bar'
 
 In your eslint rc file provide extra configuration:
 ```
-import { constants } from '@pmedianetwork/eslint-plugin'
-
 export default = {
     ...
     settings: {
-        [constants.configKey]: {
-           [constants.moduleNamespaces]: ['features', 'components'] 
+        "@pmedianetwork": {
+           "moduleNamespaces": ["features", "components"] 
         }
     }
 }
 ```
+
+### Opt in
+
+This is an opt-in only rule.
+to enable it, add to your eslint `config.rules` `"@pmedianetwork/no-private-imports": 2`
+
