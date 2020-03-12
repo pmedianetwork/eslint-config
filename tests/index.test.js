@@ -1,4 +1,4 @@
-const { configs, rules } = require('../index')
+const { configs, rules, constants } = require('../index')
 const { checkExists } = require('../utils')
 
 describe('main export', () => {
@@ -19,5 +19,9 @@ describe('main export', () => {
         expect(configs.recommended).toMatchSnapshot()
         expect(configs.flow).toMatchSnapshot()
         expect(configs.typescript).toMatchSnapshot()
+    })
+
+    it('has constants', () => {
+        expect(constants).toMatchSnapshot()
     })
 })
