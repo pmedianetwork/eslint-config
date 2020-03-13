@@ -1,10 +1,8 @@
 # no-private-imports
 
-This will disallow importing from inside of module
-
 ### Rule Details
 
-If we use a module we should use only its public interface. No imports from inside of a module are allowed.
+This will disallow importing from inside of module. Only public interface imports are allowed.
 
 Given that in configuration we specify that our module namespaces are `['components', 'features', 'hooks', 'utils']`
 
