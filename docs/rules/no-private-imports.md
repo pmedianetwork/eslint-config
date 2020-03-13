@@ -38,6 +38,5 @@ export default = {
 
 ### Opt in
 
-This is an opt-in only rule.
-to enable it, add to your eslint `config.rules` `"@pmedianetwork/no-private-imports": 2`
+This is an opt-in only rule. To enable it, add to your eslint `config.rules` `"@pmedianetwork/no-private-imports": 2` and provide a configuration.
 
