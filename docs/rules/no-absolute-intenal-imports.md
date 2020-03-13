@@ -1,9 +1,8 @@
 # no-absolute-internal-imports
 
-Rule which will help to keep track of incorrect imports
-
 ### Rule Details
 
+Rule which will help to keep track of incorrect imports.
 When we want to import a file which is internal a feature, we want to use relative path instead of absolute.
 
 ### Examples of **incorrect** code for this rule:

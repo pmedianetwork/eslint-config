@@ -49,11 +49,6 @@ ruleTester.run('no-absolute-internal-imports', noAbsoluteInternalImports, {
         {
             code: 'import initStoryshots from "@storybook/addon-storyshots"',
             filename: testFilePath('src/storyshots.test.js'),
-            settings: {
-                '@pmedianetwork': {
-                    interfacedModules: ['src/components', 'src/features', 'src/hooks', 'src/utils'],
-                },
-            },
         },
     ],
 

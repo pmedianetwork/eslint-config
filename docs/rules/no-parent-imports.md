@@ -1,9 +1,8 @@
 # no-parent-imports
 
-This will disallow imports that contain ../.. 
-
 ### Rule Details
 
+This will disallow imports that contain `../..`.
 When we want to go to far up to import a module, we should use an absolute import.
 
 ### Examples of **incorrect** code for this rule:

@@ -41,3 +41,7 @@ See http://handbook.adverity.net/changesets/#the-library-changesets-workflow
 ## Testing
 
 To run tests run `npm run test`
+
+## Custom rules
+
+Please see list of [available rules](https://github.com/pmedianetwork/eslint-config/tree/develop/docs/rules) 

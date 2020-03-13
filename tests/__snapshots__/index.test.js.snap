@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`main export has correct shapshots 1`] = `
+exports[`main export has correct snapshots 1`] = `
 Object {
   "env": Object {
     "browser": true,
@@ -173,7 +173,7 @@ Object {
 }
 `;
 
-exports[`main export has correct shapshots 2`] = `
+exports[`main export has correct snapshots 2`] = `
 Object {
   "extends": Array [
     "prettier/flowtype",
@@ -196,7 +196,7 @@ Object {
 }
 `;
 
-exports[`main export has correct shapshots 3`] = `
+exports[`main export has correct snapshots 3`] = `
 Object {
   "extends": Array [
     "prettier/@typescript-eslint",
