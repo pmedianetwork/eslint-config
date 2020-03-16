@@ -90,6 +90,7 @@ Object {
         "optionalDependencies": false,
       },
     ],
+    "import/no-useless-path-segments": "error",
     "import/prefer-default-export": Array [
       "off",
     ],
