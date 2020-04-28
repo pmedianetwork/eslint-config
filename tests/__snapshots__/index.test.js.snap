@@ -58,6 +58,10 @@ Object {
       "error",
       "as-needed",
     ],
+    "curly": Array [
+      "error",
+      "all",
+    ],
     "eqeqeq": Array [
       "error",
       "always",
@@ -90,6 +94,7 @@ Object {
         "optionalDependencies": false,
       },
     ],
+    "import/no-useless-path-segments": "error",
     "import/prefer-default-export": Array [
       "off",
     ],

@@ -50,6 +50,10 @@ ruleTester.run('no-absolute-internal-imports', noAbsoluteInternalImports, {
             code: 'import initStoryshots from "@storybook/addon-storyshots"',
             filename: testFilePath('src/storyshots.test.js'),
         },
+        {
+            code: "import { Chart } from 'components/Chart'",
+            filename: testFilePath('src/components/Column.tsx'),
+        },
     ],
 
     invalid: [
