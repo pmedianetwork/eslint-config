@@ -43,14 +43,5 @@ pipeline {
             }
         }
     }
-    post {
-        unsuccessful {
-            script {
-                if (env.DAILY) {
-                    notifySlack channel: 'dev-presense'
-                }
-            }
-        }
-    }
 }
 
