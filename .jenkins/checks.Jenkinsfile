@@ -1,5 +1,5 @@
 pipeline {
-    libraries { lib 'adverity-shared-library@0.4.1'}
+    libraries { lib 'adverity-shared-library@2.6.0'}
     agent { label "PRJob" }
     environment {
         NODE_VERSION = getNodeVersion()
