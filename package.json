@@ -6,6 +6,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
+    "test:watch": "npm run test -- --watch",
     "lint": "eslint tests/**/*.js lib/**/*.js index.js",
     "lint:fix": "npm run lint -- --fix"
   },
