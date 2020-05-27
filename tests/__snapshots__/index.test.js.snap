@@ -155,6 +155,41 @@ Object {
         "functions": false,
       },
     ],
+    "padding-line-between-statements": Array [
+      "error",
+      Object {
+        "blankLine": "always",
+        "next": "*",
+        "prev": Array [
+          "const",
+          "let",
+          "var",
+        ],
+      },
+      Object {
+        "blankLine": "any",
+        "next": Array [
+          "const",
+          "let",
+          "var",
+        ],
+        "prev": Array [
+          "const",
+          "let",
+          "var",
+        ],
+      },
+      Object {
+        "blankLine": "always",
+        "next": Array [
+          "if",
+          "return",
+        ],
+        "prev": Array [
+          "*",
+        ],
+      },
+    ],
     "prefer-destructuring": "off",
     "prettier/prettier": "error",
     "radix": Array [
