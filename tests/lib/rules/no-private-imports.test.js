@@ -1,6 +1,6 @@
 const RuleTester = require('eslint').RuleTester
-const { configKey, moduleNamespaces } = require('../../../lib/constants')
 
+const { configKey, moduleNamespaces } = require('../../../lib/constants')
 const { noPrivateImports } = require('../../../lib/rules/no-private-imports')
 
 RuleTester.setDefaultConfig({

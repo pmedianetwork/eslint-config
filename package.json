@@ -1,6 +1,6 @@
 {
     "name": "@pmedianetwork/eslint-plugin",
-    "version": "4.3.1",
+    "version": "4.4.0",
     "description": "Shared ESLint config for pmedianetwork projects.",
     "author": "pmedianetwork",
     "main": "index.js",
@@ -11,15 +11,15 @@
         "lint:fix": "npm run lint -- --fix"
     },
     "dependencies": {
-        "eslint-module-utils": "2.5.2",
         "@typescript-eslint/eslint-plugin": "2.10.0",
         "@typescript-eslint/parser": "2.10.0",
         "babel-eslint": "10.0.3",
-        "eslint": "6.7.2",
+        "eslint": "7.1.0",
         "eslint-config-airbnb": "18.1.0",
         "eslint-config-prettier": "6.0.0",
         "eslint-import-resolver-typescript": "1.1.1",
         "eslint-import-resolver-webpack": "0.11.1",
+        "eslint-module-utils": "2.5.2",
         "eslint-plugin-flowtype": "3.12.2",
         "eslint-plugin-import": "2.18.2",
         "eslint-plugin-jsx-a11y": "6.2.3",
