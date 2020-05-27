@@ -295,6 +295,8 @@ Object {
           Object {
             "args": "after-used",
             "argsIgnorePattern": "[iI]gnored$",
+            "vars": "local",
+            "varsIgnorePattern": "[iI]gnored$",
           },
         ],
         "consistent-return": "off",
