@@ -269,9 +269,10 @@ Object {
       },
       "plugins": Array [
         "@typescript-eslint",
+        "@pmedianetwork",
       ],
       "rules": Object {
-        "@pmedianetwork/no-absolute-internal-imports": "error",
+        "@pmedianetwork/no-react-import": "error",
         "@typescript-eslint/array-type": Array [
           "error",
           Object {
@@ -315,9 +316,6 @@ Object {
         "react/prop-types": "off",
       },
     },
-  ],
-  "plugins": Array [
-    "@pmedianetwork",
   ],
   "settings": Object {
     "import/resolver": Object {
