@@ -2,7 +2,7 @@
 
 ### Rule Details
 
-This rule ensures code consistency by disallowing default react import
+This rule ensures code consistency by disallowing importing default react export
 
 ### Examples of **incorrect** code for this rule:
 
