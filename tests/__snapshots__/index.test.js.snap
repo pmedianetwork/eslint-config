@@ -269,8 +269,10 @@ Object {
       },
       "plugins": Array [
         "@typescript-eslint",
+        "@pmedianetwork",
       ],
       "rules": Object {
+        "@pmedianetwork/no-react-import": "error",
         "@typescript-eslint/array-type": Array [
           "error",
           Object {
