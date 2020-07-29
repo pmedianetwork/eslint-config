@@ -26,7 +26,8 @@
         "eslint-plugin-no-only-tests": "2.3.1",
         "eslint-plugin-prettier": "3.1.2",
         "eslint-plugin-react": "7.16.0",
-        "eslint-plugin-react-hooks": "2.2.0"
+        "eslint-plugin-react-hooks": "2.2.0",
+        "prettier": "2.0.5"
     },
     "husky": {
         "hooks": {
@@ -36,8 +37,7 @@
     },
     "devDependencies": {
         "husky": "4.2.3",
-        "jest": "25.1.0",
-        "prettier": "1.19.1"
+        "jest": "25.1.0"
     },
     "license": "MIT",
     "prettier": {
