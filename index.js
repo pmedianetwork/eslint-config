@@ -8,6 +8,7 @@ const { recommended } = require('./lib/configs/recommended')
 
 module.exports = {
     prettier: {
+        arrowParens: 'avoid',
         trailingComma: 'all',
         tabWidth: 4,
         semi: false,
