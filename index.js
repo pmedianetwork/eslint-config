@@ -7,13 +7,6 @@ const { flow } = require('./lib/configs/flow')
 const { recommended } = require('./lib/configs/recommended')
 
 module.exports = {
-    prettier: {
-        trailingComma: 'all',
-        tabWidth: 4,
-        semi: false,
-        singleQuote: true,
-        printWidth: 100,
-    },
     configs: {
         typescript,
         recommended,
