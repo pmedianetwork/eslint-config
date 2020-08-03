@@ -1,6 +1,6 @@
 ---
 issue: https://github.com/pmedianetwork/adverity-presense-frontend/issues/867
-type: minor
+type: major
 label: Enhancements
 ---
 
