@@ -3,8 +3,11 @@ def releaseVersion
 def releaseUrl
 
 pipeline {
-    libraries { lib 'adverity-shared-library@2.6.0' }
+    libraries { lib 'adverity-shared-library@2.10.0' }
     agent { label "PRJob" }
+    options {
+        withAWS(role: 'CI', roleAccount: '221160807535')
+    }
     environment {
         NODE_VERSION = getNodeVersion()
     }
@@ -44,6 +47,32 @@ pipeline {
                                 tag: releaseVersion,
                                 body: releaseNoteBody
                             )
+                        }
+                    }
+                }
+                stage('Deploy') {
+                    agent { label "master" }
+                    environment {
+                        CODEARTIFACT_AUTH_TOKEN = "${sh(script: 'aws codeartifact get-authorization-token --domain adverity --domain-owner 508912190628 --query authorizationToken --output text', returnStdout: true)}".trim()
+                    }
+                    steps {
+                        checkout(
+                            scm: [
+                                $class: 'GitSCM',
+                                branches: [[name: "refs/tags/${releaseVersion}"]],
+                                doGenerateSubmoduleConfigurations: false,
+                                extensions: [
+                                        [$class: 'CleanCheckout'],
+                                        [$class: 'CloneOption', noTags: false, reference: '', shallow: false]
+                                ],
+                                userRemoteConfigs: [[url: 'git@github.com:pmedianetwork/eslint-config.git']]
+                            ]
+                        )
+                        withAWS(role: 'CI', roleAccount: '508912190628', region: 'eu-west-1') {
+                            nvm(nodeVersion) {
+                                sh 'npm ci'
+                                sh 'npm publish'
+                            }
                         }
                     }
                 }
