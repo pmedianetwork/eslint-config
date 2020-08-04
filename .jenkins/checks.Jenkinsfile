@@ -3,7 +3,6 @@ pipeline {
     agent { label "PRJob" }
     environment {
         NODE_VERSION = getNodeVersion()
-        CODEARTIFACT_AUTH_TOKEN = "${sh(script: 'aws codeartifact get-authorization-token --domain adverity --domain-owner 508912190628 --query authorizationToken --output text', returnStdout: true)}".trim()
     }
     stages {
         stage('Preparation') {
