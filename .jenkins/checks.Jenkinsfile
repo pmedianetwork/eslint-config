@@ -3,6 +3,10 @@ pipeline {
     agent { label "PRJob" }
     environment {
         NODE_VERSION = getNodeVersion()
+        CODEARTIFACT_AUTH_TOKEN = "${sh(script: 'aws codeartifact get-authorization-token --domain adverity --domain-owner 508912190628 --query authorizationToken --output text', returnStdout: true)}".trim()
+    }
+    options {
+        withAWS(role: 'CI', roleAccount: '221160807535')
     }
     stages {
         stage('Preparation') {
@@ -12,8 +16,10 @@ pipeline {
         }
         stage('Install dependencies') {
             steps {
-                nvm(env.NODE_VERSION) {
-                    sh 'npm ci'
+                withAWS(role: 'CI', roleAccount: '508912190628', region: 'eu-west-1') {
+                    nvm(env.NODE_VERSION) {
+                        sh 'npm ci'
+                    }
                 }
             }
         }
