@@ -13,7 +13,9 @@ pipeline {
         stage('Install dependencies') {
             steps {
                 sh 'echo "" > .npmrc'
-                sh 'npm ci'
+                nvm(env.NODE_VERSION) {
+                    sh 'npm ci'
+                }
             }
         }
         stage('Run tests and linters') {
