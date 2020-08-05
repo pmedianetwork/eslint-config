@@ -21,10 +21,13 @@ pipeline {
                 CODEARTIFACT_AUTH_TOKEN = "${sh(script: 'aws codeartifact get-authorization-token --domain adverity --domain-owner 508912190628 --query authorizationToken --output text', returnStdout: true)}".trim()
             }
             steps {
+                // sed is needed because there are problems inejcting the environment while using  the `nvm` closure
+                sh """
+                   sed -i "s/\\\${CODEARTIFACT_AUTH_TOKEN}/${env.CODEARTIFACT_AUTH_TOKEN}/g" .npmrc
+                """
                 nvm(env.NODE_VERSION) {
                     sh """
-                        npm config set '//adverity-508912190628.d.codeartifact.eu-west-1.amazonaws.com/npm/adverity-repo/:_authToken' "${env.CODEARTIFACT_AUTH_TOKEN}"
-                        npm ci
+                       npm ci
                     """
                 }
             }
