@@ -18,11 +18,14 @@ pipeline {
                 withAWS(role: 'CI', roleAccount: '508912190628', region: 'eu-west-1')
             }
             environment {
-                CODEARTIFACT_AUTH_TOKEN = "${sh(script: 'aws codeartifact get-authorization-token --domain adverity --domain-owner 508912190628 --query authorizationToken --output text', returnStdout: true)}".trim()
+                FOO = "${sh(script: 'aws codeartifact get-authorization-token --domain adverity --domain-owner 508912190628 --query authorizationToken --output text', returnStdout: true)}".trim()
             }
             steps {
                 nvm(env.NODE_VERSION) {
-                    sh 'npm ci'
+                    sh """
+                        export CODEARTIFACT_AUTH_TOKEN="${env.FOO}"
+                        npm ci
+                    """
                 }
             }
         }
