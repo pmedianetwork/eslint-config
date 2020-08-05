@@ -69,6 +69,10 @@ pipeline {
                             ]
                         )
                         withAWS(role: 'CI', roleAccount: '508912190628', region: 'eu-west-1') {
+                            // sed is needed because there are problems inejcting the environment while using  the `nvm` closure
+                            sh """
+                               sed -i "s/\\\${CODEARTIFACT_AUTH_TOKEN}/${env.CODEARTIFACT_AUTH_TOKEN}/g" .npmrc
+                            """
                             nvm(nodeVersion) {
                                 sh 'npm ci'
                                 sh 'npm publish'
