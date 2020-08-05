@@ -71,10 +71,8 @@ pipeline {
                                 userRemoteConfigs: [[url: 'git@github.com:pmedianetwork/eslint-config.git']]
                             ]
                         )
-                        // sed is needed because there are problems inejcting the environment while using  the `nvm` closure
-                        sh """
-                           sed -i "s/\\\${CODEARTIFACT_AUTH_TOKEN}/${env.CODEARTIFACT_AUTH_TOKEN}/g" .npmrc
-                        """
+                        // sed is needed because there are problems injecting the environment while using  the `nvm` closure
+                        sh "sed -i \"s/\\\${CODEARTIFACT_AUTH_TOKEN}/${env.CODEARTIFACT_AUTH_TOKEN}/g\" .npmrc"
                         nvm(nodeVersion) {
                             sh 'npm ci'
                             sh 'npm publish'

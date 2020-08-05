@@ -22,13 +22,9 @@ pipeline {
             }
             steps {
                 // sed is needed because there are problems inejcting the environment while using  the `nvm` closure
-                sh """
-                   sed -i "s/\\\${CODEARTIFACT_AUTH_TOKEN}/${env.CODEARTIFACT_AUTH_TOKEN}/g" .npmrc
-                """
+                sh "sed -i \"s/\\\${CODEARTIFACT_AUTH_TOKEN}/${env.CODEARTIFACT_AUTH_TOKEN}/g\" .npmrc"
                 nvm(env.NODE_VERSION) {
-                    sh """
-                       npm ci
-                    """
+                    sh 'npm ci'
                 }
             }
         }
