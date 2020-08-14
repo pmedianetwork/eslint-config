@@ -134,6 +134,7 @@ Object {
         "props": false,
       },
     ],
+    "no-underscore-dangle": "off",
     "no-unused-expressions": Array [
       "error",
       Object {
