@@ -44,6 +44,7 @@ module.exports = {
             "varsIgnorePattern": "[iI]gnored$"
         }],
         "no-negated-condition": 2,
+        "no-underscore-dangle": "off",
 
         ////////// Style //////////
 
