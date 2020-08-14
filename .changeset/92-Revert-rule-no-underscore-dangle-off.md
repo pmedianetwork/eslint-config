@@ -1,6 +1,6 @@
 ---
 issue: https://github.com/pmedianetwork/eslint-config/issues/92
-type: Enhancements
+type: patch
 ---
 
 Revert rule rule-no-underscore
