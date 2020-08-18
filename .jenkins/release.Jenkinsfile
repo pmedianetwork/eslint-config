@@ -63,8 +63,13 @@ pipeline {
                         sh "git checkout refs/tags/${releaseVersion}"
                         sh 'git reset --hard'
                         sh 'git clean -fdx'
-                        // sed is needed because there are problems injecting the environment while using  the `nvm` closure
-                        sh "sed -i \"s/\\\${ADVERITY_CODEARTIFACT_AUTH_TOKEN}/${env.ADVERITY_CODEARTIFACT_AUTH_TOKEN}/g\" .npmrc"
+                        writeFile(
+                                file: '.npmrc',
+                                text: """
+                                    @adverity:registry=https://adverity-508912190628.d.codeartifact.eu-west-1.amazonaws.com/npm/adverity-repo/
+                                    //adverity-508912190628.d.codeartifact.eu-west-1.amazonaws.com/npm/adverity-repo/:always-auth=true
+                                    //adverity-508912190628.d.codeartifact.eu-west-1.amazonaws.com/npm/adverity-repo/:_authToken=${env.ADVERITY_CODEARTIFACT_AUTH_TOKEN}
+                                """.stripIndent().trim())
                         script {
                             def nodeVersion = getNodeVersion()
                             nvm(nodeVersion) {
