@@ -71,6 +71,7 @@ pipeline {
                                     //adverity-508912190628.d.codeartifact.eu-west-1.amazonaws.com/npm/adverity-repo/:_authToken=${env.ADVERITY_CODEARTIFACT_AUTH_TOKEN}
                                 """.stripIndent().trim()
                         )
+                        sh "jq '.name = \"@adverity/eslint-plugin\"' package.json > package.json.tmp && cp package.json.tmp package.json"
                         script {
                             def nodeVersion = getNodeVersion()
                             nvm(nodeVersion) {
