@@ -69,7 +69,8 @@ pipeline {
                                     @adverity:registry=https://adverity-508912190628.d.codeartifact.eu-west-1.amazonaws.com/npm/adverity-repo/
                                     //adverity-508912190628.d.codeartifact.eu-west-1.amazonaws.com/npm/adverity-repo/:always-auth=true
                                     //adverity-508912190628.d.codeartifact.eu-west-1.amazonaws.com/npm/adverity-repo/:_authToken=${env.ADVERITY_CODEARTIFACT_AUTH_TOKEN}
-                                """.stripIndent().trim())
+                                """.stripIndent().trim()
+                        )
                         script {
                             def nodeVersion = getNodeVersion()
                             nvm(nodeVersion) {
