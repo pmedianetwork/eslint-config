@@ -4,9 +4,6 @@ pipeline {
     environment {
         NODE_VERSION = getNodeVersion()
     }
-    options {
-        withAWS(role: 'CI', roleAccount: '221160807535')
-    }
     stages {
         stage('Preparation') {
             steps {
@@ -14,15 +11,7 @@ pipeline {
             }
         }
         stage('Install dependencies') {
-            options {
-                withAWS(role: 'CI', roleAccount: '508912190628', region: 'eu-west-1')
-            }
-            environment {
-                ADVERITY_CODEARTIFACT_AUTH_TOKEN = "${sh(script: 'aws codeartifact get-authorization-token --domain adverity --domain-owner 508912190628 --query authorizationToken --output text', returnStdout: true)}".trim()
-            }
             steps {
-                // sed is needed because there are problems injecting the environment while using  the `nvm` closure
-                sh "sed -i \"s/\\\${ADVERITY_CODEARTIFACT_AUTH_TOKEN}/${env.ADVERITY_CODEARTIFACT_AUTH_TOKEN}/g\" .npmrc"
                 nvm(env.NODE_VERSION) {
                     sh 'npm ci'
                 }
